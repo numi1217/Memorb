@@ -1,5 +1,5 @@
 /**
- * OrbScreen.ts — Memorest "Save the day" screen (DESIGN.md v2 §11,
+ * OrbScreen.ts — Memorb "Save the day" screen (DESIGN.md v2 §11,
  * MVP priority 11).
  *
  * OWNS: folding the finished journal into ONE coloured sphere (colour =

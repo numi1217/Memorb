@@ -1,5 +1,5 @@
 /**
- * ReviewScreen.ts — Memorest "Review Today" screen (DESIGN.md v2 §7,
+ * ReviewScreen.ts — Memorb "Review Today" screen (DESIGN.md v2 §7,
  * MVP priority 7).
  *
  * OWNS: the wireframe world-space UI listing every kept moment from today in

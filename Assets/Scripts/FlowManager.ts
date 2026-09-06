@@ -1,5 +1,5 @@
 /**
- * FlowManager.ts — Memorest screen state machine (Phase 0 spine).
+ * FlowManager.ts — Memorb screen state machine (Phase 0 spine).
  *
  * OWNS: the single source of truth for "which screen are we on", plus the
  * transition event every other system listens to.

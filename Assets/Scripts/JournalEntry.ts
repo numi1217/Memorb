@@ -1,11 +1,11 @@
 /**
- * JournalEntry.ts — Memorest core data model (Phase 0 spine).
+ * JournalEntry.ts — Memorb core data model (Phase 0 spine).
  *
  * OWNS: the shape of a single journal entry and its (de)serialization.
  * Plain data only — NO scene access, NO @component. Import the class/interface
  * anywhere it is needed.
  *
- * Fields mirror the agreed Memorest spec (§13 of the design doc): every
+ * Fields mirror the agreed Memorb spec (§13 of the design doc): every
  * value the full flow will eventually populate. Later phases fill these in
  * stage by stage (Scan -> Confirm -> Reflect -> Feel -> Generate -> Orb).
  *

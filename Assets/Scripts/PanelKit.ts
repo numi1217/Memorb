@@ -15,7 +15,7 @@
  *
  * NOT a @component — it is a builder. Returned handle is a plain object.
  *
- * MUST NOT: own state, know about Memorest screens, or call services.
+ * MUST NOT: own state, know about Memorb screens, or call services.
  */
 
 import { Button } from "SpectaclesUIKit.lspkg/Scripts/Components/Button/Button";

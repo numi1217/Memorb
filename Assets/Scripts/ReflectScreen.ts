@@ -1,5 +1,5 @@
 /**
- * ReflectScreen.ts — Memorest "Add a personal reflection" screen
+ * ReflectScreen.ts — Memorb "Add a personal reflection" screen
  * (DESIGN.md §5, MVP priority 6).
  *
  * OWNS: the wireframe world-space UI for capturing ONE personal reflection —

@@ -1,12 +1,12 @@
-# Memorest — Design Spec
+# Memorb — Design Spec
 
-> Full product/UX spec for the Memorest Lens. Phase 0 subagents did not find this
+> Full product/UX spec for the Memorb Lens. Phase 0 subagents did not find this
 > in the repo (only the Lens Studio managed block lives in `AGENTS.md`), so it is captured
 > here for every later phase. Build phases and status live in `BUILD_PLAN.md`.
 
 ## Project description
 
-Memorest is a spatial journaling experience for Snap Spectacles that transforms
+Memorb is a spatial journaling experience for Snap Spectacles that transforms
 everyday objects and written traces into personal memories.
 
 Users scan meaningful objects, receipts, tickets, notes or packaging from their day.

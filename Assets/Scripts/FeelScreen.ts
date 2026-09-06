@@ -1,5 +1,5 @@
 /**
- * FeelScreen.ts — Memorest "Choose the overall feeling" screen
+ * FeelScreen.ts — Memorb "Choose the overall feeling" screen
  * (DESIGN.md v2 §8, MVP priority 8).
  *
  * OWNS: the wireframe world-space UI for picking ONE overall feeling for the

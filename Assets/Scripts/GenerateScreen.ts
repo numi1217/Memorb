@@ -1,5 +1,5 @@
 /**
- * GenerateScreen.ts — Memorest "Generate the daily journal" + "Review the
+ * GenerateScreen.ts — Memorb "Generate the daily journal" + "Review the
  * journal" screens (DESIGN.md v2 §9-§10, MVP priorities 9-10).
  *
  * OWNS: composing the day's journal from ONLY confirmed evidence — the

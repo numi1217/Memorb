@@ -1,5 +1,5 @@
 /**
- * CaptureController.ts — Memorest Phase 1 capture path (promoted from
+ * CaptureController.ts — Memorb Phase 1 capture path (promoted from
  * TraceJournalSpikeA_Capture).
  *
  * OWNS: turning one deliberate pinch/tap into (a) a FROZEN still texture and

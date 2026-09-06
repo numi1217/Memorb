@@ -1,5 +1,5 @@
 /**
- * MemoryCardSpawner.ts — Memorest Memory Card + card actions (DESIGN.md §3).
+ * MemoryCardSpawner.ts — Memorb Memory Card + card actions (DESIGN.md §3).
  *
  * OWNS: turning one TraceResult + frozen thumbnail + marker point into a spatial
  * Memory Card (background-cropped thumbnail, object name, "Here's what I found.

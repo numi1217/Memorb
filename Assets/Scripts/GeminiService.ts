@@ -1,5 +1,5 @@
 /**
- * GeminiService.ts — Memorest's wrapper around Gemini Flash via the
+ * GeminiService.ts — Memorb's wrapper around Gemini Flash via the
  * Remote Service Gateway (Phase 0 spine + Spike B).
  *
  * OWNS: every call to Gemini, all prompt strings, response parsing, retry, and

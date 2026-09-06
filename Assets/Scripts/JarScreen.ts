@@ -1,5 +1,5 @@
 /**
- * JarScreen.ts — Memorest "Revisit the month" screen (DESIGN.md v2 §12,
+ * JarScreen.ts — Memorb "Revisit the month" screen (DESIGN.md v2 §12,
  * MVP priority 12) — the Memory Jar / monthly container.
  *
  * OWNS: the spatial container of one coloured sphere per COMPLETED journal day.

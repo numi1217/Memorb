@@ -1,4 +1,4 @@
-# Memorest — Design Spec (v2)
+# Memorb — Design Spec (v2)
 
 > Revised UX (2026-09-04). Supersedes `DESIGN_v1.md`. Build phases + status: `BUILD_PLAN.md`.
 > Prompt log: `CLAD_PROMPTS.md`.

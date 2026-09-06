@@ -1,5 +1,5 @@
 /**
- * LaunchScreen.ts — Memorest HOME screen (DESIGN.md v2 §1).
+ * LaunchScreen.ts — Memorb HOME screen (DESIGN.md v2 §1).
  *
  * The SCREEN is now "Home". It still lives on FlowManager state `Launch` (that
  * enum value is reused as the Home state — no new state was added) and on the

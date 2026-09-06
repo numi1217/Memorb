@@ -1,15 +1,15 @@
-# Memorest
+# Memorb
 
 A spatial journaling Lens for **Snap Spectacles**, built in **Lens Studio 5.23** with TypeScript.
 
-**Memorest is a spatial journal where each day becomes an object you can hold onto.**
+**Memorb is a spatial journal where each day becomes an object you can hold onto.**
 
 Most people who want to keep a diary run into the same few things: finding the time to sit
 and write, remembering later what actually happened, and knowing where to start on a blank
-page. Memorest turns each of those into something quick and physical.
+page. Memorb turns each of those into something quick and physical.
 
 During the day you spot something that mattered — a coffee cup, a train ticket, a door you
-keep passing — and you pinch at it. Memorest works out what the thing is; you say how it
+keep passing — and you pinch at it. Memorb works out what the thing is; you say how it
 made you feel and add a line about why. One look and one sentence make the whole capture,
 done in the moment while it is still fresh, anchored to a real object you saw.
 

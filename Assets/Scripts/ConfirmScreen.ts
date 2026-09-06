@@ -1,5 +1,5 @@
 /**
- * ConfirmScreen.ts — Memorest "Confirm the evidence" screen (DESIGN.md §4,
+ * ConfirmScreen.ts — Memorb "Confirm the evidence" screen (DESIGN.md §4,
  * MVP priority 5).
  *
  * OWNS: the wireframe world-space UI for reviewing every kept trace before it

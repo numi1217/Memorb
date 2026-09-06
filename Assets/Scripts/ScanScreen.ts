@@ -1,5 +1,5 @@
 /**
- * ScanScreen.ts — Memorest Phase 1 "Scan a trace" screen (DESIGN.md §2).
+ * ScanScreen.ts — Memorb Phase 1 "Scan a trace" screen (DESIGN.md §2).
  *
  * OWNS: the Scan screen's view (prompt panel, capture frame/reticle, loading
  * state, error state) and the capture -> Gemini -> Memory Card orchestration for

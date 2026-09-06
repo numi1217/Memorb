@@ -1,5 +1,5 @@
 /**
- * JournalSession.ts — Memorest Phase 2 live session state (DESIGN.md §3).
+ * JournalSession.ts — Memorb Phase 2 live session state (DESIGN.md §3).
  *
  * OWNS: the in-progress JournalEntry for TODAY plus the ordered list of KEPT
  * trace records. This is the single source of truth for "what evidence has the

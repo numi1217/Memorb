@@ -1,5 +1,5 @@
 /**
- * ScreenRouter.ts — Memorest Phase 1 screen visibility (task 1.1).
+ * ScreenRouter.ts — Memorb Phase 1 screen visibility (task 1.1).
  *
  * OWNS: the single mapping from FlowManager.current -> which screen root
  * SceneObject is enabled. One screen visible at a time. FlowManager stays a pure

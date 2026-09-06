@@ -1,5 +1,5 @@
 /**
- * TraceGizmos.ts — tiny runtime geometry helpers for the Memorest Scan flow
+ * TraceGizmos.ts — tiny runtime geometry helpers for the Memorb Scan flow
  * (Phase 1).
  *
  * Three builders. Geometry is generated with MeshBuilder; the base material and
@@ -19,7 +19,7 @@
  *   triangulatePolygon(pts)                   -> ear-clipping triangulation (exported for
  *                                                the polygon cutout, reusable elsewhere)
  *
- * MUST NOT: own state, know Memorest screens, or call services.
+ * MUST NOT: own state, know Memorb screens, or call services.
  */
 
 import { registerFillMaterial } from "./UITheme";
