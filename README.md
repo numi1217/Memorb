@@ -2,11 +2,28 @@
 
 A spatial journaling Lens for **Snap Spectacles**, built in **Lens Studio 5.23** with TypeScript.
 
-You notice a real object during the day and pinch to capture it. The Lens reads what it is,
-you tag how it made you feel and jot a few words, and later it weaves the moments you choose
-into one short, grounded journal entry — which folds into a single coloured sphere you can
-keep private or place in your room. Each day is one sphere; a month is a small constellation
-of them.
+**Memorest is a spatial journal where each day becomes an object you can hold onto.**
+
+Most people who want to keep a diary run into the same few things: finding the time to sit
+and write, remembering later what actually happened, and knowing where to start on a blank
+page. Memorest turns each of those into something quick and physical.
+
+During the day you spot something that mattered — a coffee cup, a train ticket, a door you
+keep passing — and you pinch at it. Memorest works out what the thing is; you say how it
+made you feel and add a line about why. One look and one sentence make the whole capture,
+done in the moment while it is still fresh, anchored to a real object you saw.
+
+Later you go back through the day, keep the few moments that stuck, and let it draft the
+page in your own words, using only what you told it. The page folds into a small coloured
+sphere. Keep it to yourself, or leave it floating in the room where it happened, with a
+little plant on top that grows as the day fills out.
+
+You collect your day. A month is a shelf of spheres you made just by noticing.
+
+Making a journal this way feels like a reflex: the effort goes into noticing rather than
+wording, picking a handful of moments is enough for the page to assemble itself in your
+voice, and the plant and the growing shelf of spheres give each small act something to
+show for it.
 
 ---
 
