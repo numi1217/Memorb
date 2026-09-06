@@ -47,3 +47,7 @@ spk_debug_key.pem
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Lens Studio regenerates this every save with Git-LFS filters for Assets/ and
+# Packages/. LFS is not set up here and the repo is small, so keep it out of git.
+.gitattributes
