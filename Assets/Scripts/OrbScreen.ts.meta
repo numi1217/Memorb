@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/cb8b2c68-1c6a-476c-8635-90a79ffd3f22>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 630119aa-91bb-4436-807f-37fe8216bdbc
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 630119aa-91bb-4436-807f-37fe8216bdbc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 72747dd4-1b9a-4115-a694-312193c0481a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/72747dd4-1b9a-4115-a694-312193c0481a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: ff07deaf-b286-4a82-9c12-3210d93b7641
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    debugAutopilot: false
+    debugAutopilotPlace: false
+    doneLabel: false
+    flowManager: false
+    journalSession: false
+    keepPrivateLabel: false
+    orbMat: false
+    orbMesh: false
+    panelDistanceCm: false
+    placeConfirmLabel: false
+    placeDistanceCm: false
+    placeHintLabel: false
+    placeLabel: false
+    placeResetLabel: false
+    savedPrompt: false
+    sphereDiameterCm: false
+    sphereParent: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      orbMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      orbMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      sphereParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      savedPrompt: Today is folded away.
+      keepPrivateLabel: Keep Private
+      placeLabel: Place in Space
+      doneLabel: Done
+      placeHintLabel: Pinch to place
+      placeConfirmLabel: Confirm
+      placeResetLabel: Reset
+      panelDistanceCm: !<float> -100.000000
+      sphereDiameterCm: !<float> 18.000000
+      placeDistanceCm: !<float> 60.000000
+      debugAutopilot: false
+      debugAutopilotPlace: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">OrbScreen — fold into a glowing sphere, save the day (§11)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 flowManager {"hint":"FlowManager — Done -> Launch (Home)."}'
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — reads getEntry() to fold into the sphere + persist."}'
+    - '// @input Asset.RenderMesh orbMesh {"hint":"Sphere mesh (wire to MarkerSphereMesh.mesh)."}'
+    - '// @input Asset.Material orbMat {"hint":"Orb shader material — cloned + tinted per entry (wire to Materials/OrbGlass.mat). A real shader graph (UberPBR) with Fresnel rim-light + normal-map features toggled on — see class doc."}'
+    - "// @input SceneObject sphereParent {\"hint\":\"ALWAYS-ON holder a 'Placed' sphere is parented to — this script's own SceneObject is the toggled OrbRoot (ScreenRouter disables it off-screen), so a sphere left there would vanish instead of staying visible. Wire to an always-enabled object (e.g. CardSpawner's/OrbSpawner). Falls back to this.sceneObject (and so still vanishes/hides) if unwired.\"}"
+    - "// @input SceneObject cameraObject {\"hint\":\"The scene \\\"Camera Object\\\". Editor/Preview placement-ray fallback only — device placement uses the dominant hand's own targeting ray. Optional; the \\\"Drop Here (Preview)\\\" button just won't work in Preview if unwired.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string savedPrompt = "Today is folded away."'
+    - '// @input string keepPrivateLabel = "Keep Private"'
+    - '// @input string placeLabel = "Place in Space"'
+    - '// @input string doneLabel = "Okay"'
+    - '// @input string placeHintLabel = "Pinch to place" {"hint":"Shown ON the floating sphere while it follows your hand (2026-09-05 — replaces the old instruction panel)."}'
+    - '// @input string placeConfirmLabel = "Confirm"'
+    - '// @input string placeResetLabel = "Reset"'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the Orb panel relative to this screen root (cm, negative = in front)."}'
+    - '// @input float sphereDiameterCm = 18 {"hint":"Sphere diameter in cm."}'
+    - "// @input float placeDistanceCm = 60 {\"hint\":\"Distance (cm) out along the hand's/camera's forward ray the sphere floats while choosing where to place it.\", \"widget\":\"slider\", \"min\":20, \"max\":150, \"step\":1}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugAutopilot {"hint":"Preview-only: once the sphere pops in, tap Keep Private then Done automatically. Leave OFF for real use."}'
+    - '// @input bool debugAutopilotPlace {"hint":"Preview-only: once the sphere pops in, begin placement, finalize it (stand-in for a pinch — Editor/Preview has no hand tracking) then Done automatically. Ignored if debugAutopilot is also on. Leave OFF for real use."}'
+    - '// @ui {"widget":"group_end"}'

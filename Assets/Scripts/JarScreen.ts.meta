@@ -1,0 +1,86 @@
+- !<AssetImportMetadata/3f3ea765-a3d3-41bb-a10e-371642506210>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> cb583d3c-3747-4273-962d-60ef6b22d527
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> cb583d3c-3747-4273-962d-60ef6b22d527
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 807182f6-819f-4620-b8d9-c05136479426
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/807182f6-819f-4620-b8d9-c05136479426>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: d0348f14-c1c9-4b9a-9170-5bac739de50f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backLabel: false
+    cameraObject: false
+    debugClearSavedDays: false
+    debugOpenFirstDay: false
+    debugSeedDays: false
+    flowManager: false
+    journalSession: false
+    panelDistanceCm: false
+    sphereDiameterCm: false
+    sphereMat: false
+    sphereMesh: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      sphereMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      sphereMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      backLabel: Back to Home
+      panelDistanceCm: !<float> -100.000000
+      sphereDiameterCm: !<float> 7.000000
+      debugSeedDays: false
+      debugOpenFirstDay: false
+      debugClearSavedDays: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">JarScreen — Revisit the month (§12)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 flowManager {"hint":"FlowManager — Back -> Launch (Home)."}'
+    - "// @input AssignableType_2 journalSession {\"hint\":\"JournalSession — when this day's entry matches the live session (i.e. the day you just saved), the day-detail view shows that day's cut-out stickers. Optional; without it the detail view falls back to the object labels only.\"}"
+    - '// @input Asset.RenderMesh sphereMesh {"hint":"Sphere mesh for each day-sphere (wire to MarkerSphereMesh.mesh)."}'
+    - '// @input Asset.Material sphereMat {"hint":"Base material for the day-spheres — cloned + tinted per day (wire to MarkerWhite.mat)."}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Scene \\\"Camera Object\\\" — the Jar panels are placed in front of the user each time this screen opens (yaw-only, not billboarded). Optional; falls back to the screen root's authored position if unwired.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string backLabel = "Back to Home"'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the Jar panel tree relative to this screen root (cm, negative = in front)."}'
+    - '// @input float sphereDiameterCm = 7 {"hint":"Diameter of each day-sphere in cm."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugSeedDays {"hint":"Preview-only: if the store has 0 saved days when this screen opens, seed 3 fake days so the layout is screenshot-able. Leave OFF for real use."}'
+    - "// @input bool debugOpenFirstDay {\"hint\":\"Preview-only: auto-open the first day's detail view a moment after the Jar builds (no hand tap needed), so the detail + Reveal can be screenshotted. Leave OFF for real use.\"}"
+    - '// @input bool debugClearSavedDays {"hint":"Preview-only ONE-SHOT: wipe the persistent traceJournal.days store when this screen opens (clears test pollution). Turn back OFF after one run."}'
+    - '// @ui {"widget":"group_end"}'

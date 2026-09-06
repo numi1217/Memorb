@@ -1,0 +1,81 @@
+- !<AssetImportMetadata/2936b6a4-6aa2-42e0-971c-08cbb54b4b2a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2a2842b3-5548-40f6-8160-8f5c0cb6114a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2a2842b3-5548-40f6-8160-8f5c0cb6114a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> cf691a0b-863a-4b2e-8025-ce86ce2fee31
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/cf691a0b-863a-4b2e-8025-ce86ce2fee31>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1bdcc163-6d6c-4247-87b2-60e420d7282e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    confirmRoot: false
+    feelRoot: false
+    flowManager: false
+    generateRoot: false
+    jarRoot: false
+    launchRoot: false
+    orbRoot: false
+    otherRoots: false
+    reflectRoot: false
+    reviewRoot: false
+    scanRoot: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      launchRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scanRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      otherRoots: !<reference.SceneObject[]>
+        []
+      confirmRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      reflectRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      feelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      reviewRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      generateRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      orbRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      jarRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ScreenRouter — one screen visible at a time</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - // @input AssignableType_1 flowManager
+    - // @input SceneObject launchRoot
+    - // @input SceneObject scanRoot
+    - '// @input SceneObject[] otherRoots {"hint":"Empty roots for the not-yet-built screens (Reflect, Feel, Generate, Review, Orb, Jar — and Confirm, which is also wired to confirmRoot below)."}'
+    - '// @input SceneObject confirmRoot {"hint":"Confirm screen root (DESIGN.md §4) — enabled only on the Confirm state. Wire to Screens/ConfirmRoot."}'
+    - '// @input SceneObject reflectRoot {"hint":"Reflect screen root (DESIGN.md §5) — enabled only on the Reflect state. Wire to Screens/ReflectRoot."}'
+    - '// @input SceneObject feelRoot {"hint":"Feel screen root (DESIGN.md §6) — enabled only on the Feel state. Wire to Screens/FeelRoot."}'
+    - '// @input SceneObject reviewRoot {"hint":"Review Today screen root (DESIGN.md §7) — enabled only on the Review state. Wire to Screens/ReviewRoot."}'
+    - '// @input SceneObject generateRoot {"hint":"Generate screen root (DESIGN.md §9) — enabled only on the Generate state. Wire to Screens/GenerateRoot."}'
+    - '// @input SceneObject orbRoot {"hint":"Orb screen root (DESIGN.md §11) — enabled only on the Orb state. Wire to Screens/OrbRoot."}'
+    - '// @input SceneObject jarRoot {"hint":"Jar / monthly-container screen root (DESIGN.md §12) — enabled only on the Jar state. Wire to Screens/JarRoot."}'
+    - '// @ui {"widget":"group_end"}'

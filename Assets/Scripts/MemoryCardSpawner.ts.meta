@@ -1,0 +1,113 @@
+- !<AssetImportMetadata/aadd69a2-110f-4a34-aa12-a7ed2be10387>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2c308685-df50-4ae0-beb7-1c41639fdf88
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2c308685-df50-4ae0-beb7-1c41639fdf88
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4bd46286-b5ad-467a-9415-b9268f33f769
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4bd46286-b5ad-467a-9415-b9268f33f769>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: bcf65d04-eb89-42a1-893e-8de93e08566f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    cardGapCm: false
+    cardHeightCm: false
+    cardTowardCameraCm: false
+    cardUpCm: false
+    cardWidthCm: false
+    confirmPrompt: false
+    debugAutoKeepFirstCard: false
+    debugAutopilot: false
+    debugAutopilotRemove: false
+    debugSeedConfirm: false
+    debugSeedWithDateLoc: false
+    flowManager: false
+    journalSession: false
+    keptNote: false
+    markerMat: false
+    markerMesh: false
+    momentFlow: false
+    ocrCaption: false
+    thumbHeightCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      momentFlow: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      markerMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      markerMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      confirmPrompt: "Here's what I found. Is it correct?"
+      keptNote: Kept for today.
+      ocrCaption: "Extracted text:"
+      cardWidthCm: !<float> 30.000000
+      cardHeightCm: !<float> 34.000000
+      cardTowardCameraCm: !<float> 22.000000
+      cardUpCm: !<float> 16.000000
+      cardGapCm: !<float> 7.000000
+      thumbHeightCm: !<float> 12.000000
+      debugAutopilot: false
+      debugAutoKeepFirstCard: false
+      debugAutopilotRemove: false
+      debugSeedConfirm: false
+      debugSeedWithDateLoc: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MemoryCardSpawner — spatial Memory Cards + card actions</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - "// @input AssignableType_1 flowManager {\"hint\":\"FlowManager — screen transitions for Scan Again / Add Another Trace / Create Today's Journal.\"}"
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — live evidence store the Keep / Retake / Remove buttons and the tap-to-edit-label chooser mutate."}'
+    - '// @input SceneObject cameraObject {"hint":"Scene \"Camera Object\" — cards billboard to face it at spawn."}'
+    - "// @input AssignableType_3 momentFlow {\"hint\":\"MomentEmotionReflect — Keep hands off to its begin(order) for the per-moment emotion + question + 'Moment saved' sub-flow (§4-§6).\"}"
+    - '// @input Asset.RenderMesh markerMesh {"hint":"Marker sphere mesh (wire to MarkerSphereMesh.mesh)."}'
+    - '// @input Asset.Material markerMat {"hint":"Base material for the marker + luminous line (wire to MarkerWhite.mat)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string confirmPrompt {"hint":"Shown on the card under the title. Empty by default (2026-09-05 — the \"is it correct?\" prompt was removed)."}'
+    - '// @input string keptNote = "Kept for today." {"hint":"Replaces the confirm prompt once the moment is kept."}'
+    - '// @input string ocrCaption = "Extracted text:" {"hint":"Caption in front of the extracted-text line."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - // @input float cardWidthCm = 34
+    - // @input float cardHeightCm = 72
+    - '// @input float cardTowardCameraCm = 26 {"hint":"Card offset from the marker toward the camera (cm)."}'
+    - '// @input float cardUpCm = 34 {"hint":"Card offset above the marker (cm)."}'
+    - '// @input float cardGapCm = 7 {"hint":"Gap (cm) between the marker sphere and the bottom edge of the card, along the shared plane."}'
+    - '// @input float thumbHeightCm = 10 {"hint":"Thumbnail height inside the card (cm)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugAutopilot {"hint":"Debug: after the first card spawns, auto-run Keep -> Change Label -> pick alternative on it (no hand taps needed in Preview). Leave OFF for real use."}'
+    - '// @input bool debugAutoKeepFirstCard {"hint":"Debug: after the first card spawns, just tap Keep on it (→ hands off to the §4-§6 moment sub-flow). Use with MomentEmotionReflect.debugAutopilot to verify §4-§6 in Preview. Leave OFF for real use."}'
+    - '// @input bool debugAutopilotRemove {"hint":"Debug: when debugAutopilot is on, also Remove the card at the end (exercises marker/line teardown + return-to-Scan)."}'
+    - '// @input bool debugSeedConfirm {"hint":"Debug: on start, seed JournalSession with two synthetic kept traces and jump Launch -> Card -> Confirm (no capture / Gemini needed) so the Confirm screen can be exercised in Preview. Leave OFF for real use."}'
+    - '// @input bool debugSeedWithDateLoc {"hint":"Debug: with debugSeedConfirm on, give synthetic trace #1 a detected date + location so the opt-in path can be tested. OFF = neither seeded trace has a date/location (tests the empty path)."}'
+    - '// @ui {"widget":"group_end"}'

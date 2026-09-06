@@ -1,0 +1,84 @@
+- !<AssetImportMetadata/0bd4858b-3939-4c43-a82c-5a04925b3ff7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 836a6af8-9593-4d42-8a15-2bd3a00ecca8
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 836a6af8-9593-4d42-8a15-2bd3a00ecca8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a9c3c1a4-eaec-415f-a157-a1ebe5a5526d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a9c3c1a4-eaec-415f-a157-a1ebe5a5526d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: dc49510d-ba1c-44f2-95be-585f7843338e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugOrbColorHex: false
+    debugPreviewOrb: false
+    glowColorAmount: false
+    glowWhiteAmount: false
+    matteRoughness: false
+    noiseScale: false
+    orbMat: false
+    orbMesh: false
+    rotationSpeedDegPerSec: false
+    waveSpeed: false
+    waveStrength: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - orbMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      orbMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      waveStrength: 0.200000
+      waveSpeed: 2.900000
+      noiseScale: 0.200000
+      rotationSpeedDegPerSec: !<float> 12.000000
+      matteRoughness: 0.900000
+      glowColorAmount: 0.140000
+      glowWhiteAmount: 0.060000
+      debugPreviewOrb: false
+      debugOrbColorHex: "#5B8DEF"
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">OrbLook — Memory Orb look + live debug preview (§11)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References (debug preview only)"}'
+    - '// @input Asset.RenderMesh orbMesh {"hint":"Sphere mesh for the debug preview (wire to MarkerSphereMesh.mesh — same asset OrbScreen.orbMesh uses)."}'
+    - '// @input Asset.Material orbMat {"hint":"Orb material for the debug preview — wire to Vertex Distortion.mat, the SAME asset OrbScreen.orbMat uses."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Orb look (shared by the real orb + the debug preview)"}'
+    - "// @input float waveStrength = 0.2 {\"hint\":\"How far the surface vertices wobble (Vertex Distortion 'strength').\", \"widget\":\"slider\", \"min\":0, \"max\":1, \"step\":0.01}"
+    - "// @input float waveSpeed = 2.9 {\"hint\":\"How fast the wobble animates (Vertex Distortion 'animatedSpeed').\", \"widget\":\"slider\", \"min\":0, \"max\":20, \"step\":0.1}"
+    - "// @input float noiseScale = 0.2 {\"hint\":\"Noise scale of the wobble — smaller = broader swells, larger = finer ripples (Vertex Distortion 'noiseScale').\", \"widget\":\"slider\", \"min\":0, \"max\":1, \"step\":0.01}"
+    - '// @input float rotationSpeedDegPerSec = 12 {"hint":"Degrees/second the whole orb slowly spins on top of the surface wobble.", "widget":"slider", "min":-60, "max":60, "step":1}'
+    - "// @input float matteRoughness = 0.9 {\"hint\":\"Surface roughness — 1 = fully matte (no specular highlight, 'matte paper'), 0 = glossy/plastic.\", \"widget\":\"slider\", \"min\":0, \"max\":1, \"step\":0.01}"
+    - '// @input float glowColorAmount = 0.14 {"hint":"Self-glow tinted with the day colour — makes the orb read as luminous. 0 = none.", "widget":"slider", "min":0, "max":0.6, "step":0.01}'
+    - '// @input float glowWhiteAmount {"hint":"Extra white added to the self-glow — pushes the lit side toward a white core.", "widget":"slider", "min":0, "max":0.4, "step":0.01}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugPreviewOrb {"hint":"Preview-only: shows a live-tunable orb immediately, independent of the save flow, re-applying the sliders above every frame. Leave OFF for real use."}'
+    - "// @input string debugOrbColorHex = \"#5B8DEF\" {\"hint\":\"Orb colour used ONLY by the debug preview (the real orb always uses the day's feeling colour).\"}"
+    - '// @ui {"widget":"group_end"}'

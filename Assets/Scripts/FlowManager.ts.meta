@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/b6d7dfb1-9f2f-4557-be35-cf4338a3b7b6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 433a4f1f-310c-4c14-9ce0-1cadab66d7b0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 433a4f1f-310c-4c14-9ce0-1cadab66d7b0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f3f68412-f588-4805-9bb7-5e80e9119501
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f3f68412-f588-4805-9bb7-5e80e9119501>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: b2e40876-ec3f-4f27-a015-0a2eb39e8cdc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugStartState: false
+    verbose: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - debugStartState: Launch
+      verbose: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">FlowManager — screen state machine</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string debugStartState = "Launch" {"hint":"Screen to enter on launch. One of: Launch, Scan, Card, Review, Feel, Generate, Orb, Jar, Confirm, Reflect (the last two are retired v1 screens). Invalid text falls back to Launch."}'
+    - '// @input bool verbose = true {"hint":"Log every screen transition to the console."}'
+    - '// @ui {"widget":"group_end"}'

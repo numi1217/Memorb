@@ -1,0 +1,96 @@
+- !<AssetImportMetadata/64f2a473-499e-4671-a119-ad825ef552d9>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 4c296d92-7833-48d4-8cde-6ad3a5dc8d30
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 4c296d92-7833-48d4-8cde-6ad3a5dc8d30
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7146b537-52e2-4350-876c-8bc6dae256be
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7146b537-52e2-4350-876c-8bc6dae256be>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 145141c2-a0ac-4608-b9c9-993dc7061520
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    asrErrorsBeforeFallback: false
+    confirmLabel: false
+    debugAutopilot: false
+    debugAutopilotSkip: false
+    debugReflectionText: false
+    flowManager: false
+    forceKeyboard: false
+    journalSession: false
+    panelDistanceCm: false
+    promptText: false
+    removeLabel: false
+    skipLabel: false
+    speakLabel: false
+    tryAgainLabel: false
+    typeLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      panelDistanceCm: !<float> -100.000000
+      forceKeyboard: false
+      asrErrorsBeforeFallback: !<float> 2.000000
+      promptText: "What do you want to remember about today?"
+      speakLabel: Hold to Speak
+      typeLabel: Type
+      skipLabel: Skip
+      confirmLabel: Confirm
+      tryAgainLabel: Try Again
+      removeLabel: Remove
+      debugAutopilot: false
+      debugAutopilotSkip: false
+      debugReflectionText: Long walk by the river after work; the light went gold over the water.
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ReflectScreen — add a personal reflection (§5)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 flowManager {"hint":"FlowManager — Skip / Confirm advance to Feel (§6)."}'
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — Confirm writes the verbatim text to getEntry().reflection; Skip writes \"\"."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the Reflect panel relative to this screen root (cm, negative = in front)."}'
+    - '// @input bool forceKeyboard {"hint":"Skip ASR and use the AR keyboard fallback directly. ASR is device-only, so this is the Preview-testable path."}'
+    - '// @input float asrErrorsBeforeFallback = 2 {"hint":"After this many ASR errors / empty results in a session, auto-switch to the keyboard fallback."}'
+    - '// @input string promptText = "What do you want to remember about today?"'
+    - '// @input string speakLabel = "Hold to Speak"'
+    - '// @input string typeLabel = "Type"'
+    - '// @input string skipLabel = "Skip"'
+    - '// @input string confirmLabel = "Confirm"'
+    - '// @input string tryAgainLabel = "Try Again"'
+    - '// @input string removeLabel = "Remove"'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugAutopilot {"hint":"Preview-only: once the screen builds, inject typed text -> Try Again -> Remove -> re-type -> Confirm (no hand taps / mic needed). Leave OFF for real use."}'
+    - '// @input bool debugAutopilotSkip {"hint":"Preview-only: with debugAutopilot on, exercise the Skip path (reflection = \"\") instead of the Confirm path."}'
+    - "// @input string debugReflectionText = \"Long walk by the river after work; the light went gold over the water.\" {\"hint\":\"The text the autopilot 'types' as the confirmed reflection.\"}"
+    - '// @ui {"widget":"group_end"}'

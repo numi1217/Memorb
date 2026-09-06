@@ -1,0 +1,70 @@
+- !<AssetImportMetadata/70f68434-7ea0-49f7-9f2a-61e2f7146950>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> df9e909e-8cd2-472a-84d8-4187ceeb0a95
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> df9e909e-8cd2-472a-84d8-4187ceeb0a95
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 16ba554c-acca-4110-b202-14f3f557bd0d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/16ba554c-acca-4110-b202-14f3f557bd0d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 6e46faf5-b37e-4461-be4e-ec479449d2be
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoCaptureAfterSec: false
+    cameraObject: false
+    captureAudioTrack: false
+    captureHeightDevice: false
+    captureWidthDevice: false
+    debounceSec: false
+    useWorldQuery: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      captureAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      debounceSec: 0.800000
+      captureWidthDevice: !<float> 640.000000
+      captureHeightDevice: !<float> 480.000000
+      useWorldQuery: true
+      autoCaptureAfterSec: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">CaptureController — pinch/tap -> frozen still + marker point</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject cameraObject {"hint":"The scene \"Camera Object\". Ray origin and Preview marker fallback."}'
+    - '// @input Asset.AudioTrackAsset captureAudioTrack {"hint":"Optional short capture cue WAV. Played once per capture; skipped silently if empty."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - "// @input float debounceSec = 1.6 {\"hint\":\"Minimum seconds between captures (debounce). Raised (2026-09-05) so a jittery first pinch can't fire two captures.\"}"
+    - '// @input float captureWidthDevice = 640 {"hint":"Still width requested on device (px). Smaller = faster Gemini. Preview ignores this."}'
+    - '// @input float captureHeightDevice = 480 {"hint":"Still height requested on device (px)."}'
+    - '// @input bool useWorldQuery = true {"hint":"Use the device WorldQuery surface hit-test for the marker point."}'
+    - '// @input float autoCaptureAfterSec {"hint":"Debug: auto-fire one capture N seconds after start (0 = off)."}'
+    - '// @ui {"widget":"group_end"}'

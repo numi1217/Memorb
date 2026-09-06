@@ -1,0 +1,101 @@
+- !<AssetImportMetadata/4b370e4c-8aee-4a15-a02c-6f2adedb46bf>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c78b7a3f-bf38-439b-90fc-57c4c88b3a74
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c78b7a3f-bf38-439b-90fc-57c4c88b3a74
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a48bf715-5180-4027-8134-6a1af0c144a9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a48bf715-5180-4027-8134-6a1af0c144a9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f882ce9b-1326-4ba8-9b2a-85ecfb1fe0ae
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backgroundOpacity: false
+    bodySize: false
+    buttonCornerFraction: false
+    buttonForwardCm: false
+    buttonFrameThicknessCm: false
+    buttonLabelSize: false
+    font: false
+    lineColor: false
+    panelCornerFraction: false
+    panelFrameThicknessCm: false
+    paragraphFont: false
+    textColor: false
+    textOutlineColor: false
+    textOutlineEnabled: false
+    textOutlineWidth: false
+    titleSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - backgroundOpacity: 0.250000
+      font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      paragraphFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      titleSize: !<float> 220.000000
+      bodySize: !<float> 170.000000
+      buttonLabelSize: !<float> 110.000000
+      textColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      textOutlineEnabled: false
+      textOutlineColor: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.850000}
+      textOutlineWidth: 0.400000
+      lineColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      panelFrameThicknessCm: 0.500000
+      buttonFrameThicknessCm: 0.400000
+      panelCornerFraction: 0.200000
+      buttonCornerFraction: 0.500000
+      buttonForwardCm: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">UITheme — one Inspector panel for the wireframe UI look</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Background (live)"}'
+    - "// @input float backgroundOpacity {\"hint\":\"Opacity of the translucent backing behind every wireframe PANEL (not buttons — those carry their own gradient fill, see UIButtonFill.mat). 0 = outline only, 1 = solid. Updates live in Preview. Default 0 (2026-09-04: 'make the panel background totally transparent').\", \"widget\":\"slider\", \"min\":0, \"max\":1, \"step\":0.01}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Text (next panel build)"}'
+    - "// @input Asset.Font font {\"hint\":\"App-wide UI font (titles, buttons, captions). Empty = Lens Studio's built-in font. Drop a .ttf into Assets/ (or import one via the Font panel) and pick it here to replace EVERY UI text on the next screen build / Preview refresh.\"}"
+    - '// @input Asset.Font paragraphFont {"hint":"Font for LONG-FORM PROSE only — the generated journal paragraph + reflection and the revealed journal text. Empty = use the UI font above. Pick a different family (e.g. a serif) to set the reading text apart from the chrome."}'
+    - '// @input float titleSize = 220 {"hint":"Title text size ceiling — sizeToFit shrinks long titles below this, never grows past it.", "widget":"slider", "min":40, "max":320, "step":1}'
+    - '// @input float bodySize = 170 {"hint":"Body text size ceiling.", "widget":"slider", "min":30, "max":320, "step":1}'
+    - '// @input float buttonLabelSize = 110 {"hint":"Button label text size ceiling.", "widget":"slider", "min":30, "max":200, "step":1}'
+    - "// @input vec4 textColor = {1,1,1,1} {\"hint\":\"Default text fill colour (title/body/button labels). Explicit runtime recolours — e.g. a kept card's title, an emotion swatch — are set separately and are not affected by this.\"}"
+    - '// @input bool textOutlineEnabled {"hint":"Draw a coloured outline behind every letter. OFF by default (2026-09-04: was always on and read as a heavy black smudge around small text)."}'
+    - '// @input vec4 textOutlineColor = {0,0,0,0.85} {"hint":"Outline colour, only used when Text Outline Enabled is on."}'
+    - '// @input float textOutlineWidth = 0.4 {"hint":"Outline thickness, only used when Text Outline Enabled is on.", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Frame (next panel build)"}'
+    - '// @input vec4 lineColor = {1,1,1,1} {"hint":"Default wireframe line colour for panels and buttons. Explicit recolours (kept-state green, dimmed grey, emotion swatches) are set separately and are not affected by this."}'
+    - '// @input float panelFrameThicknessCm = 0.5 {"hint":"Panel border bar thickness, in cm.", "widget":"slider", "min":0.05, "max":2, "step":0.05}'
+    - '// @input float buttonFrameThicknessCm = 0.4 {"hint":"Button border bar thickness, in cm.", "widget":"slider", "min":0.05, "max":2, "step":0.05}'
+    - '// @input float panelCornerFraction = 0.2 {"hint":"Panel corner roundedness, as a fraction of the shorter side (0 = sharp, 0.5 = stadium).", "widget":"slider", "min":0, "max":0.5, "step":0.01}'
+    - '// @input float buttonCornerFraction = 0.5 {"hint":"Button corner roundedness — usually rounder than the panel.", "widget":"slider", "min":0, "max":0.5, "step":0.01}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Layout (next panel build)"}'
+    - "// @input float buttonForwardCm = 0.5 {\"hint\":\"Extra local-Z distance (cm) buttons sit off the panel surface, on top of PanelKit's base offset. Raise this if buttons read as overlapping/z-fighting the panel frame.\", \"widget\":\"slider\", \"min\":0, \"max\":3, \"step\":0.05}"
+    - '// @ui {"widget":"group_end"}'

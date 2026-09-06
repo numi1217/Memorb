@@ -1,0 +1,38 @@
+- !<NativePackageDescriptor/ec0f9380-852d-4467-b95a-11e6d8bb9d20>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 23
+    patch: 1
+    build: 26080420
+    type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
+  Description: "Vertex Distortion Material The material distorts assigned 3d object. This comes with animation, strength and scale control. Works best on a 3D object with higher vertex counts. If looking for more controls such as refraction, search for Jello Material in the Asset Library."
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 102
+  ExportUid: 6740f287-7733-443d-a2b8-465644310ba2
+  ComponentUid: ed28c1c3-8566-4270-af56-7c93be5eba55
+  PackagePolicy: CanBeUnpackedTransparent
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  VersionPrerelease: ""
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0

@@ -1,0 +1,104 @@
+- !<AssetImportMetadata/2c9038e9-5385-4e1f-a573-69fa50852333>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8f57e99d-b454-4087-b330-d2d68f1fe741
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8f57e99d-b454-4087-b330-d2d68f1fe741
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 22d8a74b-336d-4255-aa3d-b1ab450a6b02
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/22d8a74b-336d-4255-aa3d-b1ab450a6b02>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: d1f3ade0-0779-4214-a428-7621f68ab33a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    asrErrorsBeforeFallback: false
+    backLabel: false
+    cameraObject: false
+    debugAutopilot: false
+    editSubCaption: false
+    errGen: false
+    errNetwork: false
+    errNoMoments: false
+    flowManager: false
+    forceKeyboard: false
+    geminiService: false
+    journalSession: false
+    loadingText: false
+    panelDistanceCm: false
+    reviseLabel: false
+    saveLabel: false
+    tryAgainLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      geminiService: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      loadingText: Composing your day
+      errNetwork: "I couldn't compose your journal right now."
+      errGen: Something went wrong writing this up.
+      errNoMoments: No moments were selected — go back to Review Today.
+      saveLabel: Save
+      reviseLabel: Revise
+      backLabel: Back
+      tryAgainLabel: Try Again
+      editSubCaption: Say or type the new version.
+      panelDistanceCm: !<float> -100.000000
+      forceKeyboard: false
+      asrErrorsBeforeFallback: !<float> 2.000000
+      debugAutopilot: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">GenerateScreen — compose + review the daily journal (§9-§10)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 flowManager {"hint":"FlowManager — Save -> Orb (§11), Back -> Feel."}'
+    - '// @input AssignableType_2 geminiService {"hint":"GeminiService — the only generateJournal() call this screen makes."}'
+    - '// @input AssignableType_3 journalSession {"hint":"JournalSession — reads keptTraces() (filtered to includedInJournal) + getEntry(), writes title/generatedJournalText/finalReflection onto the entry."}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Scene \\\"Camera Object\\\" — read once per fresh entry to spawn the panel in front of the user (mirrors ReviewScreen/FeelScreen). Optional; falls back to this screen root's authored position if unwired.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string loadingText = "Composing your day"'
+    - "// @input string errNetwork = \"I couldn't compose your journal right now.\""
+    - '// @input string errGen = "Something went wrong writing this up."'
+    - '// @input string errNoMoments = "No moments were selected — go back to Review Today."'
+    - '// @input string saveLabel = "Save"'
+    - '// @input string reviseLabel = "Revise"'
+    - '// @input string backLabel = "Back"'
+    - '// @input string tryAgainLabel = "Try Again"'
+    - '// @input string editSubCaption = "Say or type the new version."'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the Generate panel tree relative to this screen root (cm, negative = in front)."}'
+    - "// @input bool forceKeyboard {\"hint\":\"Edit's text capture — skip ASR entirely and use the AR keyboard (ASR is device-only).\"}"
+    - "// @input float asrErrorsBeforeFallback = 2 {\"hint\":\"Edit's text capture — after this many ASR errors/empty results, auto-switch to the keyboard.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugAutopilot {"hint":"Preview-only: once generation succeeds, tap Save automatically after a short delay. Leave OFF for real use."}'
+    - '// @ui {"widget":"group_end"}'

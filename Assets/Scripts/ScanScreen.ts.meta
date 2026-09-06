@@ -1,0 +1,104 @@
+- !<AssetImportMetadata/cd9cbe10-da5d-4fca-a390-a89f1582d88e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e309d74f-9706-4931-b4e9-f2a1779dcb4f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e309d74f-9706-4931-b4e9-f2a1779dcb4f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3ac42e23-4720-40b5-9288-e24dcb04f1c3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3ac42e23-4720-40b5-9288-e24dcb04f1c3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 67de18c9-d959-4d86-b2db-8a1b75f4e956
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    capture: false
+    cardSpawner: false
+    debugLatencyProbe: false
+    errNetwork: false
+    errUnrecognized: false
+    flowManager: false
+    gemini: false
+    journalSession: false
+    loadingText: false
+    markerMat: false
+    maxTraces: false
+    panelDistanceCm: false
+    promptText: false
+    reticleDistanceCm: false
+    reticleHeightCm: false
+    reticleWidthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      gemini: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      capture: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      cardSpawner: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      markerMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      promptText: Scan something that reminds you of today.
+      loadingText: Finding the memory in this trace
+      errUnrecognized: "I couldn't clearly identify this."
+      errNetwork: "I couldn't analyse this trace right now."
+      maxTraces: !<float> 5.000000
+      reticleWidthCm: !<float> 26.000000
+      reticleHeightCm: !<float> 20.000000
+      reticleDistanceCm: !<float> 60.000000
+      panelDistanceCm: !<float> -95.000000
+      debugLatencyProbe: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ScanScreen — pinch -> Gemini -> Memory Card</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - // @input AssignableType_1 flowManager
+    - // @input AssignableType_2 gemini
+    - // @input AssignableType_3 capture
+    - // @input AssignableType_4 cardSpawner
+    - '// @input AssignableType_5 journalSession {"hint":"JournalSession — when wired, the trace cap counts KEPT traces (removed cards free capacity) instead of ever-spawned cards."}'
+    - '// @input SceneObject cameraObject {"hint":"Scene \"Camera Object\" — the reticle is parented here so it stays head-locked."}'
+    - '// @input Asset.Material markerMat {"hint":"Base material for the capture-frame reticle (wire to MarkerWhite.mat)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string promptText = "Hold still while I capture this moment."'
+    - '// @input string loadingText = "Finding the memory in this trace"'
+    - "// @input string errUnrecognized = \"I couldn't clearly identify this.\""
+    - "// @input string errNetwork = \"I couldn't analyse this trace right now.\""
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float maxTraces = 5 {"hint":"Maximum Memory Cards to create this session (spec: 1-5)."}'
+    - '// @input float reticleWidthCm = 26 {"hint":"Capture-frame width in cm."}'
+    - '// @input float reticleHeightCm = 20 {"hint":"Capture-frame height in cm."}'
+    - '// @input float reticleDistanceCm = 60 {"hint":"Capture-frame distance in front of the user in cm (head-locked)."}'
+    - '// @input float panelDistanceCm = -95 {"hint":"Local Z of the Scan panels relative to this screen root (cm, negative = in front)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugLatencyProbe {"hint":"After the first capture, benchmark model x json-mime combos and log timings."}'
+    - '// @ui {"widget":"group_end"}'

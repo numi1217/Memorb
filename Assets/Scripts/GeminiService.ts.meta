@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/cff4ec37-385e-4e8e-9051-5412d2d4742d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6f33d225-9893-454e-919d-70984036986a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6f33d225-9893-454e-919d-70984036986a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 04eaadd4-094d-4446-9feb-9e49d88cdddb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/04eaadd4-094d-4446-9feb-9e49d88cdddb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8689351b-1723-405b-a788-967980a398bc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    enableLogging: false
+    lowOcrMinChars: false
+    minConfidence: false
+    model: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - model: gemini-2.5-flash
+      lowOcrMinChars: !<float> 3.000000
+      minConfidence: 0.300000
+      enableLogging: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">GeminiService — Gemini Flash via RSG</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string model = "gemini-3.5-flash" {"hint":"Gemini model id — used for analyzeTrace, generateJournal AND the card cut-out (segmentPrimary). RSG-verified here: gemini-3.5-flash (returns a real segmentation polygon in ~6s — best cut-outs), gemini-3-flash-preview, gemini-2.5-flash, gemini-2.5-flash-lite, gemini-2.5-pro. NOT available: gemini-2.0-flash, gemini-3-pro-preview, gemini-3.5-flash-preview (404)."}'
+    - '// @input float lowOcrMinChars = 3 {"hint":"OCR results shorter than this many characters raise a LowOcr error."}'
+    - '// @input float minConfidence = 0.3 {"hint":"analyzeTrace confidence below this raises an Unrecognized error."}'
+    - '// @input bool enableLogging {"hint":"Log full request/response payloads."}'
+    - '// @ui {"widget":"group_end"}'

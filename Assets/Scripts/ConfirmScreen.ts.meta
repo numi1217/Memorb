@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/80a687ae-63f4-4c68-b767-6b3de7ee35ff>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1d5acc00-4080-4f63-ac24-4d2d9d724a4c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1d5acc00-4080-4f63-ac24-4d2d9d724a4c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 31f2bf6e-3feb-46af-b722-c1c724e60e88
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/31f2bf6e-3feb-46af-b722-c1c724e60e88>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 6d8799d9-be88-4b5c-8766-440b5078112e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backLabel: false
+    continueLabel: false
+    debugAutopilot: false
+    flowManager: false
+    headingText: false
+    journalSession: false
+    panelDistanceCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      panelDistanceCm: !<float> -100.000000
+      headingText: "Here's what I found. Is it correct?"
+      backLabel: Back to Scanning
+      continueLabel: Confirm and Continue
+      debugAutopilot: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ConfirmScreen — confirm the evidence (§4)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 flowManager {"hint":"FlowManager — Back to Scanning -> Scan, Confirm and Continue -> Reflect."}'
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — reads keptTraces(), writes the confirmed evidence via applyConfirmation()."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the Confirm panel tree relative to this screen root (cm, negative = in front)."}'
+    - "// @input string headingText = \"Here's what I found. Is it correct?\""
+    - '// @input string backLabel = "Back to Scanning"'
+    - '// @input string continueLabel = "Confirm and Continue"'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugAutopilot {"hint":"Preview-only: once the screen builds with >=1 trace, auto-run remove-a-fragment -> opt in date/location -> re-pick primary -> Confirm and Continue. Leave OFF for real use."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,30 @@
+# BEGIN Lens Studio managed Agents-Docs block
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+.codex/config.toml
+.claude/settings.local.json
+# END Lens Studio managed Agents-Docs block
+
+# --- Lens Studio generated / local state ---
+# Cache/ is auto-generated (~150 MB) and rebuilt by Lens Studio on open.
+Cache/
+Workspaces/
+PluginsUserPreferences/
+Logs/
+# MCP scene read-cache, regenerable
+.virtual-scene.json
+# editor lock file
+*.esproj.*.lock
+
+# --- secrets / signing (keep local, do not publish) ---
+spk_debug_key.pem
+
+# --- scratch / temp ---
+.font_tmp/
+.icon_tmp/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini

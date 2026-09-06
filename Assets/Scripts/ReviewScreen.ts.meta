@@ -1,0 +1,83 @@
+- !<AssetImportMetadata/b28ae5f4-a943-489c-b46e-045a8d439148>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1e79046c-a9da-46fa-971c-4e18eaee28d6
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1e79046c-a9da-46fa-971c-4e18eaee28d6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e8d2a3ca-1df9-467e-bb74-3296c3b54501
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e8d2a3ca-1df9-467e-bb74-3296c3b54501>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 562cdb73-1d9c-48bc-a3f3-eb278e3bba4f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backLabel: false
+    cameraObject: false
+    continueLabel: false
+    debugAutopilot: false
+    debugSeedMoments: false
+    flowManager: false
+    headingText: false
+    journalSession: false
+    panelDistanceCm: false
+    subheadingText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      headingText: These are the moments you captured today.
+      subheadingText: "Which ones belong in your journal?"
+      backLabel: Back to Home
+      continueLabel: Continue
+      panelDistanceCm: !<float> -100.000000
+      debugAutopilot: false
+      debugSeedMoments: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">ReviewScreen — Review Today, select 1-5 (§7)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 flowManager {"hint":"FlowManager — Back -> Launch (Home), Continue -> Feel (§8 overall daily emotion)."}'
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — reads keptTraces(), writes setIncluded() (pinch a moment to toggle it)."}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Scene \\\"Camera Object\\\" — read ONCE, each time this screen is freshly entered, to spawn the panel tree in front of wherever the user currently is (2026-09-05: \\\"spawn in front of the user, but not billboard\\\"). Optional; falls back to this screen root's own authored position if unwired.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string headingText = "These are the moments you captured today."'
+    - '// @input string subheadingText = "Which ones belong in your journal?"'
+    - '// @input string backLabel = "Back to Home"'
+    - '// @input string continueLabel = "Create Journal"'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the Review panel tree relative to this screen root (cm, negative = in front)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugAutopilot {"hint":"Preview-only: once the screen builds with >=1 moment, auto-run Continue with the default selection. Leave OFF for real use."}'
+    - '// @input bool debugSeedMoments {"hint":"Preview-only: if the session has 0 kept moments when this screen starts, seed 3 with varied label/emotion/reflection so the layout is screenshot-able without a real capture. Leave OFF for real use."}'
+    - '// @ui {"widget":"group_end"}'

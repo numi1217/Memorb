@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/a5df969c-fbac-4233-a49a-d2739c7c397e>
+  ImportedAssetIds:
+    Font: !<reference> 21d196b0-c1b1-46d8-bbdc-00f4d951c081
+  ImporterName: FontImporter
+  PrimaryAsset: !<reference> 21d196b0-c1b1-46d8-bbdc-00f4d951c081
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    Font: !<own> 17466ec5-d3ac-42ff-9246-ee30aca1e231
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<FontAssetData/17466ec5-d3ac-42ff-9246-ee30aca1e231>
+  VariableFontMetadata:
+    axes:
+      - tag: opsz
+        name: OpticalSize
+        minValue: 17.000000
+        defaultValue: 18.000000
+        maxValue: 18.000000
+      - tag: wght
+        name: Weight
+        minValue: 400.000000
+        defaultValue: 400.000000
+        maxValue: 700.000000
+      - tag: GRAD
+        name: GRAD
+        minValue: -50.000000
+        defaultValue: 0.000000
+        maxValue: 200.000000
+    namedInstances:
+      - name: Regular
+        coordinates:
+          - 18.000000
+          - 400.000000
+          - 0.000000
+      - name: Medium
+        coordinates:
+          - 18.000000
+          - 500.000000
+          - 0.000000
+      - name: Bold
+        coordinates:
+          - 18.000000
+          - 700.000000
+          - 0.000000
+    defaultCoordinates:
+      - 18.000000
+      - 400.000000
+      - 0.000000
+  CustomVariationStyles:
+    []

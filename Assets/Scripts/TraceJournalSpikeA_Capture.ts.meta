@@ -1,0 +1,64 @@
+- !<AssetImportMetadata/14fe2d63-7576-48d9-89c9-bf2ebdb5874f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 39236970-93e2-4425-8cc2-bcd62b22b460
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 39236970-93e2-4425-8cc2-bcd62b22b460
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e068a44b-40b7-4fd7-b360-7f8e950b1c01
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e068a44b-40b7-4fd7-b360-7f8e950b1c01>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 3180c070-ae9b-42fa-a76b-db4e38f814dd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoCaptureAfterSec: false
+    cameraObject: false
+    captureAudio: false
+    debounceSec: false
+    marker: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      marker: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      captureAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      debounceSec: 0.800000
+      autoCaptureAfterSec: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Spike A — pinch capture + marker</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject cameraObject {"hint":"The scene \"Camera Object\". Used as the ray origin and Preview marker fallback."}'
+    - '// @input SceneObject marker {"hint":"A small sphere SceneObject. Starts disabled; repositioned to the ray hit point."}'
+    - '// @input Component.AudioComponent captureAudio {"hint":"AudioComponent that plays the capture cue. Optional."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float debounceSec = 0.8 {"hint":"Minimum seconds between captures (debounce)."}'
+    - '// @input float autoCaptureAfterSec {"hint":"Debug: fire one capture automatically N seconds after start (0 = off). Lets Spike B run without a pinch."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,84 @@
+- !<AssetImportMetadata/0b58470c-0389-4bde-91a6-e3821731cdb1>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9991570a-76ac-41a6-b9d3-4dcfb744ce7b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9991570a-76ac-41a6-b9d3-4dcfb744ce7b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6cb048d7-8229-4480-a9a1-fe8ef2fcf2da
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6cb048d7-8229-4480-a9a1-fe8ef2fcf2da>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8b4d3b65-d3a2-4778-953f-ccfba6017f38
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    asrErrorsBeforeFallback: false
+    cameraObject: false
+    contentScale: false
+    debugAutopilot: false
+    debugReflectionText: false
+    flowManager: false
+    forceKeyboard: false
+    journalSession: false
+    panelDistanceCm: false
+    panelYCm: false
+    subCaption: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      panelYCm: !<float> -4.000000
+      panelDistanceCm: !<float> -95.000000
+      contentScale: 0.480000
+      subCaption: A few words are enough.
+      forceKeyboard: false
+      asrErrorsBeforeFallback: !<float> 2.000000
+      debugAutopilot: false
+      debugReflectionText: The street was quiet and the air smelled like rain.
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">MomentEmotionReflect — per-moment emotion + question (§4-§6)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - "// @input AssignableType_1 flowManager {\"hint\":\"FlowManager — Capture Another → Scan, Finish for Now → Launch, Create Today's Journal → Review.\"}"
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — setMomentEmotion(order,…) / setMomentReflection(order,…) on the just-kept moment."}'
+    - '// @input SceneObject cameraObject {"hint":"Scene \"Camera Object\" — the sub-flow panels are parented here so they stay head-locked."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelYCm = -4 {"hint":"Local Y of the panel root relative to the camera (cm, negative = below eye line)."}'
+    - '// @input float panelDistanceCm = -95 {"hint":"Local Z of the panel root relative to the camera (cm, negative = in front)."}'
+    - '// @input float contentScale = 0.48 {"hint":"Uniform scale of the panel root — the 7-row emotion panel is tall, so it is shrunk to fit."}'
+    - '// @input string subCaption = "A few words are enough." {"hint":"The sub-caption under the reflective question (DESIGN.md §5)."}'
+    - '// @input bool forceKeyboard {"hint":"Skip ASR and use the AR keyboard directly. ASR is device-only, so this is the Preview-testable path."}'
+    - '// @input float asrErrorsBeforeFallback = 2 {"hint":"After this many ASR errors / empty results, auto-switch to the keyboard fallback."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - "// @input bool debugAutopilot {\"hint\":\"Preview-only: once begin() runs, auto pick Peaceful → type an answer → Confirm → land on 'Moment saved'. Leave OFF for real use.\"}"
+    - "// @input string debugReflectionText = \"The street was quiet and the air smelled like rain.\" {\"hint\":\"The text the autopilot 'types' as the moment reflection.\"}"
+    - '// @ui {"widget":"group_end"}'

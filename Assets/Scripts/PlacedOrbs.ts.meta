@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/1e4c1f92-36d7-4f04-b072-d9b5b8498192>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 95f31169-270a-4a4e-a29d-76397846b2f2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 95f31169-270a-4a4e-a29d-76397846b2f2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 05a91f8b-b688-4411-82a8-c40248f7cd79
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/05a91f8b-b688-4411-82a8-c40248f7cd79>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 351db76b-531d-4cf8-bfc3-7dc7ae8f3d47
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    debugClearPlacements: false
+    orbMat: false
+    orbMesh: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - orbMesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
+      orbMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      debugClearPlacements: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">PlacedOrbs — restore parked balls across sessions (§11)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.RenderMesh orbMesh {"hint":"Sphere mesh — wire to MarkerSphereMesh.mesh (same asset OrbScreen.orbMesh uses)."}'
+    - '// @input Asset.Material orbMat {"hint":"Orb material — wire to Vertex Distortion.mat (same asset OrbScreen.orbMat uses)."}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Scene \\\"Camera Object\\\" — drives the per-frame billboard of each restored orb's face + glow.\"}"
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugClearPlacements {"hint":"Preview one-shot: wipe traceJournal.placements on start (clears test pollution). Turn back OFF after one run."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/67a35d96-159f-4fc0-9522-4bbf5b5bc669>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 25395e6d-9224-4eca-8da9-cc0218513460
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 25395e6d-9224-4eca-8da9-cc0218513460
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 71ad8be2-8f35-4012-bf29-c3e166747170
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/71ad8be2-8f35-4012-bf29-c3e166747170>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a006dd83-56b5-4d38-9345-3bc77cdfd214
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    analyzeOnStart: false
+    capture: false
+    gemini: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - capture: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      gemini: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      analyzeOnStart: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Spike B — Gemini vision round-trip</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 capture {"hint":"Spike A capture component. Spike B analyzes each still it emits."}'
+    - '// @input AssignableType_2 gemini {"hint":"GeminiService component."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input bool analyzeOnStart {"hint":"Also run one analyze pass on start using a live camera frame."}'
+    - '// @ui {"widget":"group_end"}'

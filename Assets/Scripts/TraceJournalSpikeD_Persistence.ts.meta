@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/1711c763-3b27-4ae7-bc65-c1081772450c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 71dac045-c884-46be-bbc4-5d65080682a0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 71dac045-c884-46be-bbc4-5d65080682a0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 211cb0b9-5e45-4b65-928c-83adaf6d178a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/211cb0b9-5e45-4b65-928c-83adaf6d178a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 59bc1aa5-15a8-4931-8aeb-6f38abba0027
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    writeEachRun: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - writeEachRun: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Spike D — persistence round-trip</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input bool writeEachRun = true {"hint":"Write a fresh entry every run (proves the write path). Leave on for the spike."}'
+    - '// @ui {"widget":"group_end"}'

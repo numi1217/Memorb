@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/ba077431-13c1-4ce5-ac5a-ce2cedff5dff>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 03a26b30-2671-49cf-b687-dc51cb01a535
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 03a26b30-2671-49cf-b687-dc51cb01a535
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 50c1dd4d-7631-41a1-9029-37a2ab3730dd
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/50c1dd4d-7631-41a1-9029-37a2ab3730dd>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 02b1c979-f7c1-4a57-9ecb-d1e5bf5fc65d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    clickTrack: false
+    minGapSec: false
+    volume: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - clickTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      volume: 0.500000
+      minGapSec: 0.050000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">UISound — soft click on every interactable (polish)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - "// @input Asset.AudioTrackAsset clickTrack {\"hint\":\"Soft UI click AudioTrackAsset — wire to the UI SFX Pack's `bubble_low` track.\"}"
+    - '// @input float volume = 0.5 {"hint":"Playback volume (0-1).", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - "// @input float minGapSec = 0.05 {\"hint\":\"Minimum seconds between clicks — debounce so rapid re-triggers don't buzz.\", \"widget\":\"slider\", \"min\":0, \"max\":0.5, \"step\":0.01}"

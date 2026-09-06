@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/15b6c2aa-b54e-40a4-bb00-1f8fd1f2fece>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 91d3405c-32ff-474b-b89c-c8ab9499b05f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 91d3405c-32ff-474b-b89c-c8ab9499b05f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 11087d4e-1d49-48ac-a6e4-ab8e156a0a38
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/11087d4e-1d49-48ac-a6e4-ab8e156a0a38>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: d19a2b3d-fa92-4801-824c-0fa34b2472f9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    asrErrorsBeforeFallback: false
+    forceKeyboard: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - forceKeyboard: false
+      asrErrorsBeforeFallback: !<float> 2.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Spike E — ASR reflection capture</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input bool forceKeyboard {"hint":"Skip ASR and use the AR keyboard fallback directly."}'
+    - '// @input float asrErrorsBeforeFallback = 2 {"hint":"After this many ASR errors in a session, auto-switch to the keyboard fallback."}'
+    - '// @ui {"widget":"group_end"}'

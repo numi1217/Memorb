@@ -1,0 +1,78 @@
+- !<AssetImportMetadata/6224ae3f-5c9f-4d0a-ab83-a5305cdb01e4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0a8cfbfd-a870-4519-bced-8aac9eeb057a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0a8cfbfd-a870-4519-bced-8aac9eeb057a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> da53d856-f8d2-4da0-9194-5bb79c9e1c11
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/da53d856-f8d2-4da0-9194-5bb79c9e1c11>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a6097b0b-6a5a-42d3-b41f-c91e61e5c23a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    backLabel: false
+    cameraObject: false
+    continueLabel: false
+    debugAutopilot: false
+    flowManager: false
+    journalSession: false
+    panelDistanceCm: false
+    promptText: false
+    showIcons: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      panelDistanceCm: !<float> -100.000000
+      promptText: Today felt…
+      continueLabel: Continue
+      backLabel: Back
+      showIcons: true
+      debugAutopilot: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">FeelScreen — choose how the day felt (§6)</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 flowManager {"hint":"FlowManager — Continue advances to Generate (Phase 5), Back returns to Review."}'
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — selecting a feeling writes getEntry().feeling and .orbColor."}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Scene \\\"Camera Object\\\" — read ONCE per fresh entry to spawn the panel in front of wherever the user currently is (not billboarded afterward). Optional; falls back to this screen root's authored position if unwired.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the Feel panel tree relative to this screen root (cm, negative = in front)."}'
+    - '// @input string promptText = "Looking back, how would you describe today overall?"'
+    - '// @input string continueLabel = "Continue"'
+    - '// @input string backLabel = "Back"'
+    - '// @input bool showIcons = true {"hint":"Render the Material icon on each feeling row. Off = colour swatch + label only."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool debugAutopilot {"hint":"Preview-only: once the screen builds, pick Happy, switch to Peaceful (verifies single-select), then Continue -> Generate. Leave OFF for real use."}'
+    - '// @ui {"widget":"group_end"}'

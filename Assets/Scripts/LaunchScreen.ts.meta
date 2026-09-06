@@ -1,0 +1,89 @@
+- !<AssetImportMetadata/5cad13b4-5be2-4a91-9330-9dac324a9a82>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0198c679-31db-42c1-a813-282de79b0dbe
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0198c679-31db-42c1-a813-282de79b0dbe
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 83229aa2-36dc-4936-8f6c-4c05333c5b2a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/83229aa2-36dc-4936-8f6c-4c05333c5b2a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 77820e15-d738-4603-bcd4-65147b3a19bb
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    cameraObject: false
+    captureHint: false
+    captureLabel: false
+    debugSeedMoment: false
+    flowManager: false
+    homeHeading: false
+    jarLabel: false
+    journalSession: false
+    panelDistanceCm: false
+    reviewDisabledNote: false
+    reviewHint: false
+    reviewLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - flowManager: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      journalSession: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      cameraObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      homeHeading: "What made today feel like today?"
+      captureLabel: Capture a Moment
+      captureHint: Notice something meaningful around you.
+      reviewLabel: Review Today
+      reviewHint: "Turn today's moments into a journal entry."
+      reviewDisabledNote: Capture a moment first — then you can review today.
+      jarLabel: Revisit the Month
+      panelDistanceCm: !<float> -100.000000
+      debugSeedMoment: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Home — Capture a Moment / Review Today</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - // @input AssignableType_1 flowManager
+    - '// @input AssignableType_2 journalSession {"hint":"JournalSession — Review Today is disabled until keptCount() >= 1; the panel rebuilds on onKeptChanged."}'
+    - "// @input SceneObject cameraObject {\"hint\":\"Scene \\\"Camera Object\\\" — the Home menu is placed in front of the user each time this screen is entered (e.g. returning here via \\\"Finish for Now\\\"). Optional; falls back to the screen root's authored position if unwired.\"}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Copy"}'
+    - '// @input string homeHeading = "What made today feel like today?"'
+    - '// @input string captureLabel = "Capture a Moment"'
+    - '// @input string captureHint = "Notice something meaningful around you."'
+    - '// @input string reviewLabel = "Review Today"'
+    - "// @input string reviewHint = \"Turn today's moments into a journal entry.\""
+    - '// @input string reviewDisabledNote = "Capture a moment first — then you can review today."'
+    - '// @input string jarLabel = "Revisit the Month"'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelDistanceCm = -100 {"hint":"Local Z of the panel relative to this screen root (cm, negative = in front)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - "// @input bool debugSeedMoment {\"hint\":\"Preview-only: seed one kept moment on start so the 'Review Today enabled' Home state can be captured without running a real capture. Leave OFF for real use.\"}"
+    - '// @ui {"widget":"group_end"}'
