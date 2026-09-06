@@ -37,6 +37,88 @@ sapling) rather than creating a second one.
 - **Remote Service Gateway** → **Gemini** (`gemini-3-flash-preview` for text, `gemini-2.5-flash` for the segmentation mask)
 - `global.persistentStorageSystem` for day / sticker / placement persistence
 
+## Built with CLAD — AI-assisted development
+
+**Every line of this project was written through CLAD** (Claude-assisted development:
+Claude Code driving Lens Studio through its agent toolkit). The starting point was Snap's
+blank *Specs Base Template*. The finished result is ~**13,200 lines of typed, documented
+TypeScript across 28 single-responsibility modules** — a complete multi-screen spatial
+application with a live LLM pipeline, on-device surface placement, procedural 3-D visuals,
+and full cross-session persistence.
+
+### It's all on the record
+
+Nothing here is a black box. The build is logged, in order, in two files you can read
+end to end:
+
+| File | What it is |
+|---|---|
+| **`CLAD_PROMPTS.md`** | ~1,850 lines · **63 numbered rounds**. Every request in the developer's own words, the diagnosis, the change made, and the verification that followed. |
+| **`BUILD_PLAN.md`** | ~2,500 lines · **36 phases / rounds** (A–Z, then AA onward). The plan that was actually executed, phase by phase. |
+
+The git history mirrors both. A reader can trace any feature — the growing sapling, the
+object cut-out, the month navigation — from the sentence that asked for it to the code
+that shipped it.
+
+### Not autocomplete — a full agentic loop
+
+CLAD didn't just suggest code. Each round it ran the whole engineering cycle against the
+live editor over Lens Studio's MCP bridge:
+
+1. **Read** the design spec (`DESIGN.md`) and the existing modules for context.
+2. **Write / edit** TypeScript, then **recompile** and fix type errors.
+3. **Drive the Preview** with scripted *autopilot* runs — seed moments, step through
+   Home → Capture → Feel → Generate → Orb, exercise the month view.
+4. **Inspect the result**: capture screenshots, query the live runtime scene graph
+   (object transforms, which leaves of the sapling are enabled), read the Lens logs.
+5. **Wire the scene**: set component inputs and object properties directly through the
+   editor API.
+6. **Diagnose** failures from logs and runtime state, find the *root* cause (not a patch),
+   apply the fix, and re-verify.
+7. **Clean up**: reset every debug flag, wipe test data, boot clean, save.
+
+### The hard problems it solved
+
+- **SIK interactors, reverse-engineered.** Worked out which interactor Lens Studio exposes
+  in the editor vs. on device, and used `startPoint` / `endPoint` / trigger-release edges
+  so the same hand-ray placement code drives both the Preview cursor and a real pinch.
+- **Segmentation → clean silhouette.** Gemini returns a 256 px PNG probability mask.
+  `GeminiService` decodes it, traces the outline with **Moore-neighbour boundary
+  following**, simplifies it with **Douglas–Peucker**, and smooths the stair-steps with
+  **Chaikin** — turning a raster blob into a crisp cut-out mesh. Prompt and model choices
+  were tuned to land inside the Remote Service Gateway's ~30 s deadline.
+- **WorldQuery at ~5 Hz.** The depth map lags head motion, so a stale frame could drop the
+  orb or a capture marker *behind* the user. Added front-of-camera / distance sanity
+  checks so only trustworthy hits are used.
+- **A whole class of "the panel spawned behind me" bugs**, root-caused to
+  `quat.fromEulerAngles(yaw)` flipping 180° when the head is pitched — replaced everywhere
+  with `quat.lookAt` on the flattened view vector.
+- **Procedural geometry** built from scratch with `MeshBuilder`: the orb's radial-gradient
+  glow disc, the blinking creature eyes, and the sapling — a tapered stem plus rounded
+  leaf blades that unfurl one per captured moment, with an ease-out-back "pop" and a slow
+  idle sway.
+- **Session & state design.** Adding a capture to a day that's already saved *revises the
+  same journal entry* — it never creates a second sphere for one day. The sapling animates
+  its growth exactly once, remembers the stage it reached, and the room-placed orb updates
+  in place with no re-placement.
+- **LLM-reliability engineering.** Watchdog timers, one retry, model fallbacks, and
+  prompting that keeps the generated journal grounded *only* in evidence the user
+  explicitly confirmed — it never invents an event, place, or feeling.
+
+### What that adds up to
+
+A gentle, coherent product — not a tech demo. ~10 screens, a real vision + OCR +
+segmentation + text-generation pipeline, a visible hand-to-orb tether during placement,
+background-removed object stickers, a living plant that grows with each day's moments,
+per-month browsing, and persistence that survives a restart — every step verified running
+in Preview before it was called done. The build log doubles as an architecture-decision
+record: each module opens with a header stating what it **owns** and what it **must not**
+do, and each round of `CLAD_PROMPTS.md` ends with how the change was checked.
+
+The direction, the product calls, and the on-device testing were the developer's; the
+implementation, the tooling loop, and the verification were CLAD's. That collaboration is
+the project.
+
 ## Getting started
 
 1. Open `journal.esproj` in **Lens Studio 5.23.x**.
