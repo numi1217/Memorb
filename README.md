@@ -1,29 +1,21 @@
 # Memorb
 
+**Notice the moment. Journal it when you’re ready. Memorb is a spatial journal where each day becomes an object you can hold onto.**
+
+Most people who want to keep a diary run into the same problems: finding time to sit and write, remembering later what actually happened, and knowing where to begin on a blank page. Memorb makes journaling easier by separating it into two simple actions: capture the thought now, then organise it later.
+
+During the day, you notice something that matters, such as a coffee cup, a train ticket or a door you keep passing, and pinch to capture it. Memorb identifies the object, then asks how it made you feel and why. One look and one sentence are enough to record the thought while it is still fresh, without needing to stop and write a complete diary entry.
+
+Later, when you have more time, you can review and organise the moments you collected. Choose the ones that stayed with you, and Memorb turns them into a starting draft using only the details and reflections you confirmed. You can edit the draft yourself or regenerate another version until it feels right.
+
+Once saved, the journal page folds into a small coloured sphere. You can keep it private or place it in the room where the memory happened. A small plant grows on top as more moments are added to that day.
+
+You collect your day. Over time, a month becomes a shelf of spheres created simply by noticing.
+
+By separating immediate capture from later reflection, Memorb removes the pressure to write everything at once. The effort goes into noticing what matters rather than finding perfect words, while the plant and growing collection of spheres give each small act of journaling something visible to show for it.
+
+
 A spatial journaling Lens for **Snap Spectacles**, built in **Lens Studio 5.23** with TypeScript.
-
-**Memorb is a spatial journal where each day becomes an object you can hold onto.**
-
-Most people who want to keep a diary run into the same few things: finding the time to sit
-and write, remembering later what actually happened, and knowing where to start on a blank
-page. Memorb turns each of those into something quick and physical.
-
-During the day you spot something that mattered — a coffee cup, a train ticket, a door you
-keep passing — and you pinch at it. Memorb works out what the thing is; you say how it
-made you feel and add a line about why. One look and one sentence make the whole capture,
-done in the moment while it is still fresh, anchored to a real object you saw.
-
-Later you go back through the day, keep the few moments that stuck, and let it draft the
-page in your own words, using only what you told it. The page folds into a small coloured
-sphere. Keep it to yourself, or leave it floating in the room where it happened, with a
-little plant on top that grows as the day fills out.
-
-You collect your day. A month is a shelf of spheres you made just by noticing.
-
-Making a journal this way feels like a reflex: the effort goes into noticing rather than
-wording, picking a handful of moments is enough for the page to assemble itself in your
-voice, and the plant and the growing shelf of spheres give each small act something to
-show for it.
 
 ---
 
