@@ -197,6 +197,5 @@ visible for the session and reappears near the same spot next launch.
 
 ## Not in scope (yet)
 
-Music search · a custom palm gesture for the month menu · exact same-room spatial
-persistence · freely repositioning individual moment cards · rich in-place journal-text
+Music search · a custom palm gesture for the month menu  · freely repositioning individual moment cards · rich in-place journal-text
 editing.
